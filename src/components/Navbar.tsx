@@ -16,7 +16,6 @@ const navLinks = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [promoHeight, setPromoHeight] = useState(44);
   const location = useLocation();
 
   useEffect(() => {
@@ -24,23 +23,10 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    // Check if promo is visible
-    const checkPromoHeight = () => {
-      const computed = getComputedStyle(document.documentElement).getPropertyValue('--promo-height');
-      setPromoHeight(parseInt(computed) || 0);
-    };
-
     window.addEventListener("scroll", handleScroll);
-
-    // Observe changes to promo height
-    const observer = new MutationObserver(checkPromoHeight);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['style'] });
-
-    checkPromoHeight();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      observer.disconnect();
     };
   }, []);
 
@@ -61,7 +47,7 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className="fixed left-0 right-0 z-50 transition-all duration-300"
-      style={{ top: `${promoHeight}px` }}
+      style={{ top: '0px' }}
     >
       <div className={`transition-all duration-300 ${
         isScrolled

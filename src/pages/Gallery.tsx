@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
-import PromoBanner from "@/components/PromoBanner";
 import Footer from "@/components/Footer";
 import MobileCallButton from "@/components/MobileCallButton";
 import { useSiteContent } from "@/hooks/use-site-content";
@@ -107,7 +106,6 @@ const GalleryPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <PromoBanner />
       <Navbar />
 
       {/* Hero Section */}

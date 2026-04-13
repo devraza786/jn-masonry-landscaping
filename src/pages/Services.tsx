@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
-import PromoBanner from "@/components/PromoBanner";
 import Footer from "@/components/Footer";
 import MobileCallButton from "@/components/MobileCallButton";
 import { useSiteContent } from "@/hooks/use-site-content";
@@ -110,7 +109,6 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <PromoBanner />
       <Navbar />
 
       {/* Hero Section */}
