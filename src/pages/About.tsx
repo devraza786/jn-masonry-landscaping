@@ -1,21 +1,14 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
-import PromoBanner from "@/components/PromoBanner";
 import Footer from "@/components/Footer";
 import MobileCallButton from "@/components/MobileCallButton";
 import { useSiteContent } from "@/hooks/use-site-content";
-import { useEffect } from "react";
 
 const About = () => {
   const { content } = useSiteContent();
 
-  useEffect(() => {
-    document.documentElement.style.setProperty('--promo-height', '44px');
-  }, []);
-
   return (
     <div className="min-h-screen bg-background">
-      <PromoBanner />
       <Navbar />
 
       {/* Hero Section */}

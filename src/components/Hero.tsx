@@ -6,7 +6,7 @@ const Hero = () => {
   const { content } = useSiteContent();
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ paddingTop: 'calc(var(--promo-height, 44px) + 80px)' }}>
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ paddingTop: '80px' }}>
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
